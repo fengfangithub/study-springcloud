@@ -1,0 +1,19 @@
+server:
+  port: 8091
+  servlet:
+    context-path: /ribbon
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    status-page-url-path: ${server.servlet.context-path}/info
+    health-check-url-path: ${server.servlet.context-path}/health
+# 配置的方式设置Ribbon的负载均衡策略
+# 设置的服务提供方的 应用名称
+#EUREKA-PROVIDER:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule # 策略类(全路径名)
+spring:
+  application:
+    name: consumer-ribbon

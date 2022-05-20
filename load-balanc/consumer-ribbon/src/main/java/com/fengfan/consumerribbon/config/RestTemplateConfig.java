@@ -1,4 +1,4 @@
-package com.fengfan.eurekaconsumer.config;
+package com.fengfan.consumerribbon.config;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
