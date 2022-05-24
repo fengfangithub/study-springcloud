@@ -1,0 +1,17 @@
+server:
+  port: 8093
+  servlet:
+    context-path: /hystrix
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    status-page-url-path: ${server.servlet.context-path}/info
+    health-check-url-path: ${server.servlet.context-path}/health
+spring:
+  application:
+    name: consumer-hystrix
+feign:
+  hystrix:
+    enabled: true

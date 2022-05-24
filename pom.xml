@@ -24,6 +24,7 @@
     <modules>
         <module>eureka</module>
         <module>load-balanc</module>
+        <module>hystrix</module>
     </modules>
 
     <dependencyManagement>
