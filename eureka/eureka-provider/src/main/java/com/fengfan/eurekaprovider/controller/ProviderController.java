@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.http.HttpServletRequest;
+
 /**
  * @author fengfan
  * @description 服务提供者
@@ -20,5 +22,10 @@ public class ProviderController {
     @PostMapping("/sayHello")
     public String sayHello(String name) {
         return "我是服务端" + serverPort + "，你好" + name;
+    }
+
+    @PostMapping("/getZuulHeader")
+    public String getZuulHeader(HttpServletRequest httpServletRequest) {
+        return "我是服务端" + serverPort + ",zuul的Cookie请求头为" + httpServletRequest.getHeader("Cookie");
     }
 }

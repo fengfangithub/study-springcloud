@@ -8,6 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
+    <groupId>com.fengfan</groupId>
     <artifactId>eureka-consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>eureka-consumer</name>

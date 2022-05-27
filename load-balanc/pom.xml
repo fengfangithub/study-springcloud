@@ -8,6 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
+    <groupId>com.fengfan</groupId>
     <artifactId>load-balanc</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>load-balanc</name>
