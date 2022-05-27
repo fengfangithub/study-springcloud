@@ -26,6 +26,7 @@
         <module>load-balanc</module>
         <module>hystrix</module>
         <module>zuul</module>
+        <module>config</module>
     </modules>
 
     <dependencyManagement>

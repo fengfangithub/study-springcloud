@@ -1,0 +1,3 @@
+config:
+  name: 我是config配置
+  age: 18
