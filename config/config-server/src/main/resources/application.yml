@@ -1,0 +1,18 @@
+server:
+  port: 8500
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/fengerwa/study-springcloud.git
+          search-paths: springcloud-config
+          default-label:   master
+          username:
+          password:
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
