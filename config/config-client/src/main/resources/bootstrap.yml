@@ -9,6 +9,13 @@ spring:
       discovery:
         enabled: true #从配置中心读取文件
         service-id: config-server #配置中心的servieId，即服务名。
+# rabbitmq配置
+  rabbitmq:
+    addresses: localhost
+    port: 5672
+    username: guest
+    password: guest
+
 eureka:
   client:
     service-url:

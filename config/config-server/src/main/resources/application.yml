@@ -12,7 +12,19 @@ spring:
           default-label:   master
           username:
           password:
+# rabbitmq配置
+  rabbitmq:
+    addresses: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
+# 设置actuator在HTTP上暴露控制端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
