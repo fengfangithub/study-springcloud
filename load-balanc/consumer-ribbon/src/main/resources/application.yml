@@ -9,11 +9,26 @@ eureka:
   instance:
     status-page-url-path: ${server.servlet.context-path}/info
     health-check-url-path: ${server.servlet.context-path}/health
-# 配置的方式设置Ribbon的负载均衡策略
-# 设置的服务提供方的 应用名称
-#EUREKA-PROVIDER:
-#  ribbon:
-#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule # 策略类(全路径名)
+
 spring:
   application:
     name: consumer-ribbon
+
+#全局配置
+ribbon:
+  ConnectTimeout: 1000 #服务请求连接超时时间（毫秒）
+  ReadTimeout: 3000 #服务请求处理超时时间（毫秒）
+  OkToRetryOnAllOperations: true #对超时请求启用重试机制
+  MaxAutoRetriesNextServer: 1 #切换重试实例的最大个数
+  MaxAutoRetries: 1 # 切换实例后重试最大次数
+  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #修改负载均衡算法
+
+# 服务提供方的单独配置设置
+#eureka-provider:
+#  ribbon:
+#    ConnectTimeout: 1000 #服务请求连接超时时间（毫秒）
+#    ReadTimeout: 3000 #服务请求处理超时时间（毫秒）
+#    OkToRetryOnAllOperations: true #对超时请求启用重试机制
+#    MaxAutoRetriesNextServer: 1 #切换重试实例的最大个数
+#    MaxAutoRetries: 1 # 切换实例后重试最大次数
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #修改负载均衡算法
