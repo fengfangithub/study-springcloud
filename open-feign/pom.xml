@@ -3,13 +3,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>load-balanc</artifactId>
+        <artifactId>study-springcloud</artifactId>
         <groupId>com.fengfan</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
     <groupId>com.fengfan</groupId>
-    <artifactId>consumer-feign</artifactId>
+    <artifactId>open-feign</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>consumer-feign</name>
 

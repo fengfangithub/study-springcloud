@@ -24,7 +24,7 @@ public class ConsumerController {
     @PostMapping("/askHello")
     public String askHello(){
         MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
-        body.add("name", "consumer8081");
+        body.add("name", "consumer8090");
         ResponseEntity<String> responseEntity = restTemplate.postForEntity("http://EUREKA-PROVIDER/provider/api/sayHello", body, String.class);
         return responseEntity.getBody();
     }
