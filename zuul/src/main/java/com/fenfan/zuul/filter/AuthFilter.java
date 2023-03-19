@@ -51,10 +51,9 @@ public class AuthFilter extends ZuulFilter {
      * 过滤器的具体执行逻辑，这里判断请求是否携带token，如果不携带则令zuul过滤该请求，不对其进行路由
      *
      * @return
-     * @throws ZuulException
      */
     @Override
-    public Object run() throws ZuulException {
+    public Object run() {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
         //获取token

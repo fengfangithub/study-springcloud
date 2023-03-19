@@ -21,6 +21,7 @@
 
     <modules>
         <module>consumer-ribbon</module>
+        <module>consumer-feign</module>
     </modules>
 
 
