@@ -4,27 +4,17 @@ server:
     context-path: /ribbon
 eureka:
   client:
+    # false表示不向注册中心注册自己
+    register-with-eureka: false
     service-url:
       defaultZone: http://localhost:8761/eureka/
-  instance:
-    status-page-url-path: ${server.servlet.context-path}/info
-    health-check-url-path: ${server.servlet.context-path}/health
 
 spring:
   application:
     name: consumer-ribbon
 
-#全局配置
-ribbon:
-  ConnectTimeout: 1000 #服务请求连接超时时间（毫秒）
-  ReadTimeout: 3000 #服务请求处理超时时间（毫秒）
-  OkToRetryOnAllOperations: true #对超时请求启用重试机制
-  MaxAutoRetriesNextServer: 1 #切换重试实例的最大个数
-  MaxAutoRetries: 1 # 切换实例后重试最大次数
-  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #修改负载均衡算法
-
-# 服务提供方的单独配置设置
-#eureka-provider:
+# 服务提供方的单独配置设置（服务名称大小写必须和注册的一样）
+#EUREKA-PROVIDER:
 #  ribbon:
 #    ConnectTimeout: 1000 #服务请求连接超时时间（毫秒）
 #    ReadTimeout: 3000 #服务请求处理超时时间（毫秒）

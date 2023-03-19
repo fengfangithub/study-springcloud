@@ -19,8 +19,8 @@ public class RibbonConfig {
      * @author fengfan
      * @date 2022/5/20 16:04
      */
-    @Bean
-    public IRule iRule(){
-        return new RandomRule();
-    }
+//    @Bean
+//    public IRule iRule(){
+//        return new RandomRule();
+//    }
 }
