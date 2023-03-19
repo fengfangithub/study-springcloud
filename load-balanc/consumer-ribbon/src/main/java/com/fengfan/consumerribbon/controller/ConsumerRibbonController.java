@@ -25,7 +25,7 @@ public class ConsumerRibbonController {
     public String getServerInfo() {
         MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
         body.add("name", "consumer8091");
-        ResponseEntity<String> responseEntity = restTemplate.postForEntity("http://EUREKA-PROVIDER/provider/api" +
+        ResponseEntity<String> responseEntity = restTemplate.postForEntity("http://EUREKA-PROVIDER/api" +
                 "/sayHello", body, String.class);
         return responseEntity.getBody();
     }

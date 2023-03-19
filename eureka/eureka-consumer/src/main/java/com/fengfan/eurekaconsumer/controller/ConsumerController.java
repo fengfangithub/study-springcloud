@@ -25,7 +25,7 @@ public class ConsumerController {
     public String askHello(){
         MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
         body.add("name", "consumer8090");
-        ResponseEntity<String> responseEntity = restTemplate.postForEntity("http://EUREKA-PROVIDER/provider/api/sayHello", body, String.class);
+        ResponseEntity<String> responseEntity = restTemplate.postForEntity("http://EUREKA-PROVIDER/api/sayHello", body, String.class);
         return responseEntity.getBody();
     }
 }
