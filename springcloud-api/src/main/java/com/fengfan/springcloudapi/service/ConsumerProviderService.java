@@ -3,6 +3,7 @@ package com.fengfan.springcloudapi.service;
 import com.fengfan.springcloudapi.entity.Person;
 import org.springframework.cloud.netflix.feign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 /**
  * @author fengfan
@@ -19,4 +20,7 @@ public interface ConsumerProviderService {
      */
     @PostMapping("/api/getOne")
     Person getOne();
+
+    @PostMapping("/api/sayHello")
+    String sayHello(@RequestBody String name);
 }

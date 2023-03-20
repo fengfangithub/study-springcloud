@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -38,8 +39,9 @@ public class ProviderController implements ConsumerProviderService {
         return client;
     }
 
+    @Override
     @PostMapping("/sayHello")
-    public String sayHello(String name) {
+    public String sayHello(@RequestBody String name) {
         return "我是服务端" + serverPort + "，你好" + name;
     }
 

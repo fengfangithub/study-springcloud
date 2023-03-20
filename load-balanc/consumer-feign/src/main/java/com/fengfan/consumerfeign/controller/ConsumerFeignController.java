@@ -24,4 +24,9 @@ public class ConsumerFeignController {
         return consumerProviderService.getOne();
     }
 
+    @PostMapping("requestHello")
+    public String requestHello(){
+        return consumerProviderService.sayHello("feign8092");
+    }
+
 }
