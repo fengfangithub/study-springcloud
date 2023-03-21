@@ -19,3 +19,8 @@ spring:
 #    MaxAutoRetriesNextServer: 1 #切换重试实例的最大个数
 #    MaxAutoRetries: 1 # 切换实例后重试最大次数
 #    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #修改负载均衡算法
+
+feign:
+  hystrix:
+    #如果处理自身的容错就开启。
+    enabled: true

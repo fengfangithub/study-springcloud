@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
  * @date 2023/3/19 17:01
  * @since JDK1.8
  */
-@FeignClient(value = "EUREKA-PROVIDER")
+@FeignClient(value = "EUREKA-PROVIDER", fallbackFactory = ConsumerProviderServiceBack.class)
 public interface ConsumerProviderService {
 
     /**

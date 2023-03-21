@@ -1,12 +1,20 @@
 server:
   port: 8094
+spring:
+  application:
+    name: zuul
+
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka/
-spring:
-  application:
-    name: zuul
+  instance:
+    # 自定义服务名称信息
+    instance-id: zull:8094
+    #访问路径可以显示Ip地址
+    prefer-ip-address: true
+
+
 zuul:
   routes:
 #    prefix: zuul #添加zuul前缀

@@ -28,4 +28,12 @@ public class ConsumerController {
         ResponseEntity<String> responseEntity = restTemplate.postForEntity("http://EUREKA-PROVIDER/api/sayHello", body, String.class);
         return responseEntity.getBody();
     }
+
+    @PostMapping("/testProviderHystrix")
+    public String testProviderHystrix(){
+        MultiValueMap<String, String> body = new LinkedMultiValueMap<>();
+        body.add("name", "consumer8090");
+        ResponseEntity<String> responseEntity = restTemplate.postForEntity("http://HYSTRIX-PROVIDER/api/testProviderHystrix", body, String.class);
+        return responseEntity.getBody();
+    }
 }

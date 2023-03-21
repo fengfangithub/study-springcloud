@@ -20,12 +20,12 @@ public class ConsumerFeignController {
     private ConsumerProviderService consumerProviderService;
 
     @PostMapping("getOne")
-    public Person getOne(){
+    public Person getOne() {
         return consumerProviderService.getOne();
     }
 
     @PostMapping("requestHello")
-    public String requestHello(){
+    public String requestHello() {
         return consumerProviderService.sayHello("feign8092");
     }
 

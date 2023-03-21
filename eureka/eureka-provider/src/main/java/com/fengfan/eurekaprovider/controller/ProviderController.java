@@ -42,6 +42,11 @@ public class ProviderController implements ConsumerProviderService {
     @Override
     @PostMapping("/sayHello")
     public String sayHello(@RequestBody String name) {
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "我是服务端" + serverPort + "，你好" + name;
     }
 
